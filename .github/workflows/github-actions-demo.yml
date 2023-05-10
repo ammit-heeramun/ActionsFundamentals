@@ -1,0 +1,15 @@
+name: GitHub Actions Demo
+
+on: 
+  push:
+    branches:
+      -main
+    paths-ignore:
+    - '.gitbub/**'
+  pull_request:
+    branches: [ main ]
+    types: [opened, reopened, synchronize, closed]
+  schedule:
+    - cron: '15 6 * * 0' # Runs every day at midnight UTC
+  workflow_dispatch:
+    
